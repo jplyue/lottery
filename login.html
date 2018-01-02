@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+	<div class="web_login">
+		<div class="login_form">
+			<h6>用户登录</h6>
+			<div class="uinArea" id="uinArea">
+	            <div class="inputOuter2" id="uArea">
+	                <span><img src="assets/images/login_ico2.png"></span>
+	                <input type="text" id="loginname" name="loginname" class="inputstyle" maxlength="16" placeholder="用户名（6-15位数字、字符）">
+	            </div>
+	        </div>
+			
+			<div class="pwdArea">
+                <div class="inputOuter2">
+                    <span><img src="assets/images/login_ico1.png"></span>
+                    <input type="password" id="p" name="p" class="inputstyle" maxlength="16" placeholder="密码（6-15位字符或数字）">
+                </div>
+            </div>
+
+            <div class="control-password clearfix">
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=22223213&amp;site=qq&amp;menu=yes" target="_blank" title="去找回密码">忘记密码?</a>
+            </div>
+
+            <div class="button-container">
+                <input type="button" id="login-btn" value="立即登录" class="button_login">
+            </div>
+
+            <div class="dla">还没有大赢家账号？<a id="zca" href="javascript:;">立即注册</a></div>
+
+		</div>
+		
+
+		<div class="reg_form hidden">
+			<h6>用户注册</h6>
+
+			<div class="uinArea" id="uinArea">
+	            <div class="inputOuter2" id="uArea">
+	                <span><img src="assets/images/login_ico2.png"></span>
+	                <input type="text" id="loginname" name="loginname" class="inputstyle" maxlength="16" placeholder="用户名（6-15位数字、字符）">
+	            </div>
+	        </div>
+			
+			<div class="pwdArea">
+                <div class="inputOuter2">
+                    <span><img src="assets/images/login_ico1.png"></span>
+                    <input type="password" id="p" name="p" class="inputstyle" maxlength="16" placeholder="密码（6-15位字符或数字）">
+                </div>
+            </div>
+
+			<div class="pwdArea">
+	            <div class="inputOuter2">
+	                <span><img src="assets/images/login_ico1.png"></span>
+	                <input type="password" id="p2" name="p" class="inputstyle" maxlength="16" placeholder="请再次输入密码">
+	            </div>
+	        </div>
+	
+			<div class="emailArea">
+                <div class="inputOuter2" id="">
+                    <span><img src="assets/images/login_ico3.png"></span>
+                    <input type="text" id="email" name="email" class="inputstyle" placeholder="请输入您常用的邮箱">
+                </div>
+            </div>
+
+            <div class="regArea">
+                <div class="inputOuter2">
+                    <span><img src="assets/images/login_ico5.png"></span>
+                    <img id="captcha-img" title="点击更新" src="assets/images/vcode.png" onclick="this.src='assets/images/vcoded41d.png?'+Math.random()" alt="看不清，点击刷新">
+                    <input type="text" id="captcha" name="captcha" class="inputstyle" maxlength="4" placeholder="请输入验证码">
+                </div>
+            </div>
+			
+
+			<div class="button-container">
+                <input type="button" id="reg" class="button_reg" value="免费注册">
+            </div>
+
+            <div class="dla">已有大赢家账号？<a id="dla" href="javascript:;">点此登录</a></div>
+		</div>
+
+	</div>
+
+	<script src="assets/js/jquery-1.7.2.min.js"></script>
+
+	<script>
+		$(function(){
+			var type = GetQueryString('type');
+			if(type){
+				if(type != 'login'){
+					$('.login_form').addClass('hidden');
+					$('.reg_form').removeClass('hidden');
+				}
+			}
+
+			$('#dla').click(function(){
+				$('.login_form').removeClass('hidden');
+				$('.reg_form').addClass('hidden');
+			});
+
+			$('#zca').click(function(){
+				$('.login_form').addClass('hidden');
+				$('.reg_form').removeClass('hidden');
+			});
+
+
+		});
+		
+		//获取地址栏参数
+		function GetQueryString(name){
+		    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		    var r = window.location.search.substr(1).match(reg);
+		    if(r!=null)return  decodeURI(r[2]); return null;
+		}
+	</script>
+</body>
+</html>

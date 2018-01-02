@@ -1,0 +1,133 @@
+html, body{ padding: 0; margin: 0; }
+
+body {
+    font-family: "Microsoft Yahei";
+    font-size: 14px;
+    margin: 0;
+    background-size: cover;
+}
+
+a{ text-decoration: none; }
+
+.hidden{ display: none; }
+
+.web_login {
+    padding-top: 30px;
+    margin: 0 auto;
+    width: 350px;
+}
+
+.web_login h6 {
+    line-height: 1;
+    font-size: 18px;
+    color: #f15454;
+    font-weight: normal;
+    margin: 0;
+}
+
+.uinArea{
+    height: 47px;
+    margin-top: 25px;
+    position: relative;
+    z-index: 10;
+}
+.web_login .inputOuter2 {
+    height: 47px;
+    float: left;
+}
+
+.web_login .inputOuter span, .web_login .inputOuter2 span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    height: 43px;
+    line-height: 43px;
+    width: 46px;
+    text-align: center;
+}
+
+.web_login .inputOuter span img, .web_login .inputOuter2 span img {
+    vertical-align: middle;
+}
+
+.web_login .inputstyle {
+    width: 302px;
+    height: 43px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    outline: 0;
+    padding-left: 46px;
+    color: #666;
+    box-shadow: none;
+    -webkit-appearance: none;
+    background: #fff;
+    font: 15px/43px "STHeiti","Microsoft YaHei","Helvetica Neue","Helvetica","SimSun","STSong","Arial","sans-serif";
+}
+
+.web_login .pwdArea {
+    height: 47px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 3;
+}
+
+.web_login .emailArea, .web_login .regArea {
+    height: 47px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 3;
+}
+
+.web_login #captcha-img {
+    position: absolute;
+    top: 8.5px;
+    right: 8px;
+    float: right;
+}
+
+.button-container {
+    margin-top: 25px;
+    height: 45px;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
+}
+
+.button_reg, .button_login {
+    width: 350px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 45px;
+    line-height: 45px;
+    background: #f15454;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.dla {
+    text-align: center;
+    line-height: 35px;
+    color: #888;
+    margin: 10px 0;
+}
+
+.dla a {
+    color: #f15454;
+}
+
+/*登录*/
+.control-password {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.control-password a {
+    color: #999;
+    cursor: pointer;
+}
